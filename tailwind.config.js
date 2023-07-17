@@ -5,6 +5,7 @@ export default {
     extend: {
       boxShadow: {
         header: "0 2px 8px rgba(0, 0, 0, 0.25)",
+        summary: "0 1px 18px 10px rgba(0, 0, 0, 0.25)",
       },
     },
   },
