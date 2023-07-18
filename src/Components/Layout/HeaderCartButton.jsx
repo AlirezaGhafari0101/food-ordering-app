@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import CartIcon from "../Cart/CartIcon";
+import CartContext from "../../Store/cart-context";
 
 export const HeaderCartButton = ({onshownCart}) => {
+
+  const {items} = useContext(CartContext)
+ 
+
   return (
     <button  className="group cursor-pointer border-none bg-[#4d1601] py-[0.75rem] px-[3rem] rounded-3xl flex justify-around items-center font-bold hover:bg-[#2c0d00] active:bg-[#2c0d00]"
         onClick={onshownCart}
@@ -10,7 +15,7 @@ export const HeaderCartButton = ({onshownCart}) => {
         <CartIcon />
       </span>
       <span>Your Cart</span>
-      <span className="bg-[#b94517] py-1 px-4 rounded-3xl ml-4 font-bold group-hover:bg-[#92320c] group-active:bg-[#92320c]">0</span>
+      <span className="bg-[#b94517] py-1 px-4 rounded-3xl ml-4 font-bold group-hover:bg-[#92320c] group-active:bg-[#92320c]">{items.length}</span>
     </button>
   );
 };

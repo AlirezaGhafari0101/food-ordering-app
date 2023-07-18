@@ -5,7 +5,7 @@ import { HeaderCartButton } from "./HeaderCartButton";
 import './Header.css'
 
 export const Header = ({onshownCart}) => {
-  console.log(onshownCart);
+
   return (
     <>
       <header className="fixed top-0 left-0 w-full h-[5rem] text-white flex justify-between items-center px-[10%] shadow-header z-10 bg-[#8a2b06]">
